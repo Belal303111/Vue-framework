@@ -1,0 +1,27 @@
+.result{
+    border: 5px solid black;
+    padding: 5px;
+}
+.sum,
+.sub,
+.mul,
+.div,
+.mod{
+    width: 20px; 
+    height: 10px;
+    padding: 20px;
+     /* margin: 30px; */
+    background-color: aquamarine;
+    font-size: 40px;
+    /* text-align: center; */
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+.sum:hover,
+.sub:hover,
+.mul:hover,
+.div:hover,
+.mod:hover {
+ background-color: blue;
+}

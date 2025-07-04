@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<body>
+<link rel="stylesheet" href="style.css">
+    <h1>This is My page</h1>
+    <button type="button"  onclick="document.getElementById('belal').innerHTML='This is my simple calculator'">
+        My button
+    </button>
+    <p type="button" id="belal">My Simple Calculator</p>
+
+
+
+    <div id="Belal-app">
+        <div class="input">
+        <input class="first_number" type="number" v-model.number="a" placeholder="Enter the first number">
+        <br><br>
+        <input class="second_number" type="number" v-model.number="b" placeholder="Enter the second number">
+        </div>
+        <br>
+        
+    <button class="sum" @click="sum">+</button>
+    <button class="sub"  v-on:click="sub">-</button>
+    <button class="mul" v-on:click="mul">*</button>
+    <button class="div" v-on:click="div">/</button>
+    <button class="mod" v-on:click="mod">%</button>
+       
+    <p class="result">
+        <strong>Result:</strong>{{result}}
+    </p>
+    </div>
+   <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+       <script src="script.js"></script>
+</body>
+</html>
