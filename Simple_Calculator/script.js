@@ -9,12 +9,7 @@ createApp({
         }
     },
     methods:{
-//     input()
-// {
-//     int(prompt("Enter the first numbers: ",a,b));
-//     return a,b;
-// },
-         sum()
+     sum()
 {
     this.result= this.a+this.b;
 },
@@ -37,27 +32,4 @@ createApp({
 }
     }
 }).mount('#Belal-app');
-
-
-// var operation='';
-// // console.log("Please enter your operation")
-// var n=0,m=0;
-// prompt(int("Enter the numbers \n ",n,m));
-// prompt("Enter your operation: ",operation);
-// var test='y';
-// while(test!=y)
-//    {
-//     if(operation=='+')
-//         document.writeln(sum(n,m));
-//     else if(operation =='-')
-//         document.writeln(sub(n,m));
-//     else if(operation == '*')
-//         document.writeln(mul(n,m));
-//     else if(operation=="/")
-//         document.writeln(div(n,m));
-//     else if(operation=="%")
-//         document.writeln(mod(n,m));
-//     else document.writeln("The operation is not true");
-//     prompt("if you finish enter y ",test);
-// }
 
