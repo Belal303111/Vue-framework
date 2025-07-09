@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <link rel="stylesheet" href="../css/style.css">
+    <div id="ToDo_App">
+        <h1 class="heder">
+            HELLO THIS IS MY TO DO LIST APPLICATION
+        </h1>
+        <input type="text" v-model="name" placeholder="Enter your Task name">
+        <input type="text" v-model="description" placeholder="Enter your task description">
+        <button class="create" v-on:click="create_task(name,description)">Create Task</button>
+        <br>
+        <input type="text" v-model="name" placeholder="Enter the name of the task">
+        <input type="text" v-model="new_name" placeholder="Enter the new name">
+        <input type="text" v-model="new_description" placeholder="Enter the new description">
+        <button class="update" v-on:click="update_task(name,new_name,new_description)">Update Task</button>
+        <br>
+        <input type="text" v-model="name" placeholder="Enter the task that you want to read">
+        <button class="read" v-on:click="read_task(name)">Read Task</button>
+        <br>
+        <input type="text" v-model="name" placeholder="Enter the task that you want to delete">
+        <button class="delete" v-on:click="delete_task(name)">Delete Task</button>
+        <br>
+        <button class="show" v-on:click="show_all">Show all Tasks</button>
+
+    </div>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <script src="../js/script.js"></script>
+</body>
+</html>
