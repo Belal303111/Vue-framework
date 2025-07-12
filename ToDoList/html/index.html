@@ -5,31 +5,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    <link rel="stylesheet" href="../css/style.css">
+<body class="bg-blue-600 bg-gradient-to-r from-blue-500 via-yellow-500 to-red-500">
+    <!-- <link rel="stylesheet" href="../css/style.css"> -->
+    
     <div id="ToDo_App">
-        <h1 class="heder">
+        <h1 class="flex justify-center items-center bg-black text-white text-3xl mx-80">
             HELLO THIS IS MY TO DO LIST APPLICATION
         </h1>
-        <input type="text" v-model="name" placeholder="Enter your Task name">
-        <input type="text" v-model="description" placeholder="Enter your task description">
-        <button class="create" v-on:click="create_task(name,description)">Create Task</button>
+        <input class="w-3/4 flex justify-center items-center p-2.5 m-2.5 border-2 border-black hover:bg-gray-500" type="text" v-model="name" placeholder="Enter your Task name">
+        <input class="w-3/4 flex justify-center items-center p-2.5 m-2.5 border-2 border-black hover:bg-gray-500" type="text" v-model="description" placeholder="Enter your task description">
+        <button class="p-2.5 m-2.5 w-96 flex justify-center items-center text-center left-1/4 relative bg-green-500 border-solid hover:bg-black text-blue-600" v-on:click="create_task(name,description)">Create Task</button>
         <br>
-        <input type="text" v-model="name" placeholder="Enter the name of the task">
-        <input type="text" v-model="new_name" placeholder="Enter the new name">
-        <input type="text" v-model="new_description" placeholder="Enter the new description">
-        <button class="update" v-on:click="update_task(name,new_name,new_description)">Update Task</button>
+        <input class="w-3/4 flex justify-center items-center p-2.5 m-2.5 border-2 border-black hover:bg-gray-500" type="text" v-model="name" placeholder="Enter the name of the task">
+        <input class="w-3/4 flex justify-center items-center p-2.5 m-2.5 border-2 border-black hover:bg-gray-500" type="text" v-model="new_name" placeholder="Enter the new name">
+        <input class="w-3/4 flex justify-center items-center p-2.5 m-2.5 border-2 border-black hover:bg-gray-500" type="text" v-model="new_description" placeholder="Enter the new description">
+        <button class="p-2.5 m-2.5 w-96 flex justify-center items-center text-center left-1/4 relative bg-green-500 hover:bg-black text-blue-600" v-on:click="update_task(name,new_name,new_description)">Update Task</button>
         <br>
-        <input type="text" v-model="name" placeholder="Enter the task that you want to read">
-        <button class="read" v-on:click="read_task(name)">Read Task</button>
+        <input class="w-3/4 flex justify-center items-center p-2.5 m-2.5 border-2 border-black hover:bg-gray-500" type="text" v-model="name" placeholder="Enter the task that you want to read">
+        <button class="p-2.5 m-2.5 w-96 flex justify-center items-center text-center left-1/4 relative bg-green-500 hover:bg-black text-blue-600" v-on:click="read_task(name)">Read Task</button>
         <br>
-        <input type="text" v-model="name" placeholder="Enter the task that you want to delete">
-        <button class="delete" v-on:click="delete_task(name)">Delete Task</button>
+        <input class="w-3/4 flex justify-center items-center p-2.5 m-2.5 border-2 border-black hover:bg-gray-500" type="text" v-model="name" placeholder="Enter the task that you want to delete">
+        <button class="p-2.5 m-2.5 w-96 flex justify-center items-center text-center left-1/4 relative bg-green-500 hover:bg-black text-blue-600" v-on:click="delete_task(name)">Delete Task</button>
         <br>
-        <button class="show" v-on:click="show_all">Show all Tasks</button>
+        <button class="p-2.5 m-2.5 w-96 flex justify-center items-center text-center left-1/4 relative bg-green-500 hover:bg-black text-blue-600" v-on:click="show_all">Show all Tasks</button>
 
     </div>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script src="../js/script.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
 </body>
 </html>
