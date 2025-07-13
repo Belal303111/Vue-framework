@@ -10,7 +10,7 @@ createApp({
         create_task(name,description){
             if(this.name && this.description)
            {
-            var task=this.toDo.find(task=>task.name===name)
+            const task=this.toDo.find(task=>task.name===name)
             if(!task)
             {
             this.toDo.push({name:this.name,description:this.description});
@@ -29,7 +29,7 @@ createApp({
                 alert("There is not any task");
                 return;
             }
-            var task=this.toDo.find(task=>task.name===name)
+            const task=this.toDo.find(task=>task.name===name)
             if(task)
             {
                 task.name=new_name;
@@ -45,9 +45,10 @@ createApp({
                 alert("There is not any task");
                 return;
             }
-            var task=this.toDo.find(task=>task.name===name)
+            const task=this.toDo.find(task=>task.name===name)
             if(task){
-                alert("The name is :"+task.name+" The description is: "+task.description);
+              //  alert("The name is :"+task.name+" The description is: "+task.description); old style
+              alert(`The name is:${task.name} \nThe description is:${task.description}`) //new style
             }
             else alert("The task is not found");
         },
@@ -56,7 +57,7 @@ createApp({
                 alert("There is not any task");
                 return;
             }
-            var index=this.toDo.findIndex(task=>task.name===name)
+            const index=this.toDo.findIndex(task=>task.name===name)
             if(index!==-1)
             {
                this.toDo.splice(index,1);
@@ -66,16 +67,19 @@ createApp({
                 alert("The task is not found");
             }
         },
-        show_all()
+        show_all() //updated to the new style
         {
-            if(this.toDo.length===0) {
+            if(!this.toDo.length) {
                 alert("There is not any task");
                 return;
             }
-            for(var i=0;i<this.toDo.length;i++)
-            {
-                alert(this.toDo[i].name+" "+this.toDo[i].description);
-            }
+            // for(var i=0;i<this.toDo.length;i++)  //old style
+            // {
+            //     // alert(this.toDo[i].name+" "+this.toDo[i].description);
+            // }
+            this.toDo.forEach(({name,description},index) => {
+                alert(`Task${index+1} The name is:${this.name} \n The discription is:${this.description}`);
+            });
         }
     }
 }).mount("#ToDo_App")
